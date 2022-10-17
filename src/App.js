@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, } from "react-router-dom";
 //style
 import './App.css';
 //components
+import Logo from './components/logo';
 import Navbar from './components/navbar';
 import List from './components/list';
 import Ajout from './components/ajout';
@@ -17,7 +18,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            {/* <Route path="logo" element={<Logo />} /> */}
+            {<Route path="logo" element={<Logo />} />}
             <Route path="/list" element={<List />} />
             <Route path="ajout" element={<Ajout />} />
             <Route path="ajout2" element={<Ajout2 />} />
