@@ -1,4 +1,3 @@
-
 import React from 'react';
 //External librairy
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +17,8 @@ class App extends React.Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="list" element={<List />} />
+            {/* <Route path="logo" element={<Logo />} /> */}
+            <Route path="/list" element={<List />} />
             <Route path="ajout" element={<Ajout />} />
             <Route path="ajout2" element={<Ajout2 />} />
           </Routes>

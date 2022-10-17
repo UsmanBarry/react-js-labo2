@@ -1,11 +1,12 @@
 import React from "react";
 class GenList extends React.Component {
+
     render() {
         return (
             <tr>
-                <td>{this.props.utilisateurs.code}</td>
-                <td>{this.props.utilisateurs.nom}</td>
-                <td>{this.props.utilisateurs.prenom}</td>
+                <td>{this.props.utilisateur.code}</td>
+                <td>{this.props.utilisateur.nom}</td>
+                <td>{this.props.utilisateur.prenom}</td>
             </tr>
         )
 

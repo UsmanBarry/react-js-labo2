@@ -6,7 +6,7 @@ class Logo extends React.Component {
                 Logo est chargé sous APP directement
                 <div className="container">
                     <div className="row">
-                        <a href="https://fr.reactjs.org/"><img src="reactlogo" alt="Logo" /></a>
+                        <a href="https://fr.reactjs.org/"><img src="logo" alt="logo" /></a>
                     </div>
                 </div>
             </div>

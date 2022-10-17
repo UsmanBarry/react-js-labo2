@@ -1,10 +1,23 @@
 import React from "react";
-//import GenList from "./genlist";
+import GenList from "./genlist";
 let utils = [{ code: 'GreMa', nom: 'Grenier', prenom: 'Marc' },
 { code: 'RoyPa', nom: 'Roy', prenom: 'Patrick' },];
 class Liste extends React.Component {
-    userList() {
 
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            utilisateurs: []
+        }
+    }
+    componentDidMount() {
+        this.setState({ utilisateurs: utils })
+    }
+    userList() {
+        return this.state.utilisateurs.map(utilCourant => {
+            return <GenList utilisateur={utilCourant} key={utilCourant.code} />
+        })
     }
     render() {
         return (
@@ -25,5 +38,7 @@ class Liste extends React.Component {
             </div>
         )
     }
+
+
 }
 export default Liste
