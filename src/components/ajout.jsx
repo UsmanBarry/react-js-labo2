@@ -15,20 +15,24 @@ class ajout extends React.Component {
 
 
     }
-    onChangeCode(e) {
-        this.setState({
-            code: e.target.value
-        })
-    }
-    onChangeNom(e) {
-        this.setState({
-            nom: e.target.value
-        })
-    }
-    onChangePrenom(e) {
-        this.setState({
-            prenom: e.target.value
-        })
+    // onChangeCode(e) {
+    //     this.setState({
+    //         code: e.target.value
+    //     })
+    // }
+    // onChangeNom(e) {
+    //     this.setState({
+    //         nom: e.target.value
+    //     })
+    // }
+    // onChangePrenom(e) {
+    //     this.setState({
+    //         prenom: e.target.value
+    //     })
+    // }
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+        console.log(e.target)
     }
     onSubmit(e) {
         e.preventDefault();
@@ -49,15 +53,22 @@ class ajout extends React.Component {
                         <label>Nom:</label>
                         <input type="text"
                             required
-                            className="form-control" value={this.state.nom} onChange={this.onChange} />
+                            className="form-control" value={this.state.nom}
+                            //onChange={this.onChange} 
+                            onChange={this.handleChange} />
                         <label>Prenom:</label>
                         <input type="text"
                             required
-                            className="form-control" value={this.state.prenom} onChange={this.onChange} />
+                            className="form-control" value={this.state.prenom}
+                            //onChange={this.onChange} 
+                            onChange={this.handleChange}
+                        />
                         <label>Code:</label>
                         <input type="text"
                             required
-                            className="form-control" value={this.state.code} onChange={this.onChange} />
+                            className="form-control" value={this.state.code}
+                            // onChange={this.onChange} 
+                            onChange={this.handleChange} />
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Ajout" className="btn btn-primary" />

@@ -20,20 +20,23 @@ class Modification extends React.Component {
 
 
     }
-    onChangeLocal(e) {
-        this.setState({
-            local: e.target.value
-        })
-    }
-    onChangeBatisse(e) {
-        this.setState({
-            batisse: e.target.value
-        })
-    }
-    onChangeDep(e) {
-        this.setState({
-            dep: e.target.value
-        })
+    // onChangeLocal(e) {
+    //     this.setState({
+    //         local: e.target.value
+    //     })
+    // }
+    // onChangeBatisse(e) {
+    //     this.setState({
+    //         batisse: e.target.value
+    //     })
+    // }
+    // onChangeDep(e) {
+    //     this.setState({
+    //         dep: e.target.value
+    //     })
+    // }
+    handleChange(e) {
+        console.log(e.target)
     }
     onSubmit(e) {
         e.preventDefault();
@@ -85,11 +88,14 @@ class Modification extends React.Component {
                         <label>Local:</label>
                         <input type="text"
                             required
-                            className="form-control" value={this.state.local} onChange={this.onChange} />
+                            className="form-control" value={this.state.local} //onChange={this.onChange} 
+                            onChange={this.handleChange}
+                        />
                         <label>Batisse:</label>
                         <input type="text"
                             required
-                            className="form-control" value={this.state.batisse} onChange={this.onChange} />
+                            className="form-control" value={this.state.batisse} //onChange={this.onChange} 
+                            onChange={this.handleChange} />
 
                     </div>
                     <div className="form-group">
